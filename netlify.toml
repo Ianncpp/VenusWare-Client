@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+  command = "echo 'Static site - no build needed'"
+
+[[redirects]]
+  from = "/"
+  to = "/home.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-of-use"
+  to = "/terms-of-use.html"
+  status = 200
+
+[[redirects]]
+  from = "/user-agreement"
+  to = "/user-agreement.html"
+  status = 200
