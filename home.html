@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="VenusWare - Лучший бесплатный клиент для любимой игры.">
+    <title>VenusWare - Лучший бесплатный клиент для любимой игры</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-left">
+            <img class="navbar-logo" src="assets/icon.png" alt="VenusWare logo">
+            <a class="navbar-brand" href="#">VenusWare</a>
+        </div>
+        <div class="navbar-language">
+
+        </div>
+        <div class="navbar-links">
+            <a href="https://t.me/VenusWare_support_bot" target="_blank"><i class="fas fa-headset"></i> Поддержка</a>
+            <a href="#review"><i class="fas fa-video"></i> Видео обзор</a>
+            <a href="#statistics"><i class="fas fa-info-circle"></i> Статистика</a>
+        </div>
+    </div>
+</nav>
+
+<section class="welcome" id="home">
+    <div class="welcome-container">
+        <!-- Left side content -->
+        <div class="welcome-content">
+            <h1>Коротко о проекте</h1>
+            <p>Лучший бесплатный клиент для вашей любимой игры с множеством функций и настроек. Наслаждайтесь игровым процессом с нашим удобным и мощным клиентом.</p>
+            <div class="welcome-buttons">
+                <a href="https://venusware.ru/downloads/VenusWareLoader.jar" class="btn btn-gradient"><i class="fas fa-download"></i> Скачать</a>
+                <a class="btn btn-dark">Обновления</a>
+            </div>
+        </div>
+
+        <!-- Right side cards -->
+        <div class="info-cards" id="info">
+            <div class="card">
+                <i class="fas fa-bolt"></i>
+                <h3>Быстрота</h3>
+                <p>Оптимизированный клиент с минимальной нагрузкой на систему.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Безопасность</h3>
+                <p>Защита вашего аккаунта и анонимность в игре.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-star"></i>
+                <h3>Качество</h3>
+                <p>Высокое качество визуальных эффектов и стабильная работа.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cogs"></i>
+                <h3>Настройки</h3>
+                <p>Гибкая настройка под ваш стиль игры.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Сообщество</h3>
+                <p>Активное сообщество и техническая поддержка.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-globe"></i>
+                <h3>Доступность</h3>
+                <p>Бесплатный доступ ко всем функциям клиента.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video-review" id="review">
+    <div class="container">
+        <h1>Видеообзор</h1>
+        <p>Ниже вы можете посмотреть небольшой геймплей с нашим клиентом.</p>
+        <div class="video-embed">
+            <video id="mainVideo" src="img-vids/vidoz.mp4" title="Обзор чита" allowfullscreen></video>
+            <div class="video-overlay" id="videoOverlay">
+                <div class="play-button" onclick="playVideo()">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-controls" id="videoControls">
+                <div class="controls-row">
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="control-btn" onclick="skipTime(-5)" title="Skip 5 seconds back">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button class="control-btn" onclick="playVideo()" id="playPauseBtn" title="Play/Pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn" onclick="skipTime(5)" title="Skip 5 seconds forward">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                        <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar" onclick="seekVideo(event)">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="statistics" id="statistics">
+    <div class="container">
+        <h1>Статистика</h1>
+        <p>Визуализация прогресса</p>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-person"></i>
+                <span>Посещений сайта</span>
+                <p>200000+</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-download"></i>
+                <span>Скачиваний</span>
+                <p>10000+</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-calendar-days"></i>
+                <span>Дней с открытия</span>
+                <p>700+</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-copyright">Copyright © VenusWare 2025</div>
+        <div class="eula">
+            <a href="/terms-of-use">Условия пользования</a>
+            <a href="/user-agreement">Пользовательское соглашение</a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="changelogModal" aria-hidden="true" role="dialog" aria-modal="false">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document" aria-labelledby="changelogTitle">
+        <button class="modal-close" type="button" aria-label="Закрыть" data-close>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+            <h2 id="changelogTitle">Changelog</h2>
+        </div>
+        <div class="modal-body">
+            <div class="changelog-content">
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">1 сентября 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">VoiceChat</span> — Голосовой чат между игроками</li>
+                            <li><span class="chg-label">KillAura</span> — Vulcan</li>
+                            <li><span class="chg-label">FreeCam</span> — рекод</li>
+                            <li><span class="chg-label">TargetESP</span> — SoulsCircle</li>
+                            <li><span class="chg-label">FTHelper</span> — Доп опции → Не ставить сферу/шар на землю</li>
+                            <li><span class="chg-label">AntiBot</span> — обновлён под ReallyWorld</li>
+                            <li><span class="chg-label">AutoDuel</span> — Улучшен</li>
+                            <li><span class="chg-label">TargetPearl</span> — Автоматически кидает эндер жемчуг за противником</li>
+                            <li><span class="chg-label">ShaderEsp</span> — более красивые и настраиваемые по сравнению с GlowESP но менее оптимизированы</li>
+                            <li><span class="chg-label">Snow</span> — Свечение, новая настройка совместима не со всеми режимами</li>
+                            <li><span class="chg-label">Particles</span> — Обычные, улучшены визуально + новая анимация</li>
+                            <li><span class="chg-label">Predictions</span> — Улучшен рендер при включённых: Particles</li>
+                            <li><span class="chg-label">ParticleTrails</span> — Обычные, улучшены визуально + новая анимация</li>
+                            <li><span class="chg-label">Criticals</span> — MetaHvH, MetaRun</li>
+                            <li><span class="chg-label">HeadSwap</span> — Помогает свапать предметы, на голове</li>
+                            <li><span class="chg-label">MetaHelper</span> — Помогает при игре на MetaHvH</li>
+                            <li><span class="chg-label">Spider</span> — Sphere, помогает залазить на стены с помощью сфер/шаров</li>
+                            <li><span class="chg-label">Strafe</span> — Мультисерверные/Современные</li>
+                        </ul>
+                    </div>
+                    <div class="chg-group">
+                        <div class="chg-group-title is-fix">fix</div>
+                        <ul class="chg-list is-fix">
+                            <li>AutoTotem — пофиксил все баги со свапом</li>
+                            <li>Trails — Стрелка</li>
+                            <li>Мелких багов чита</li>
+                            <li>Оптимизирован рендер некоторых визуалов</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">11 августа 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">HUD</span> — Полностью переписан новый основной hud Venus</li>
+                            <li><span class="chg-label">HUD</span> — Старый улучшен</li>
+                            <li>Улучшен рендер визуальных модулей</li>
+                            <li>Настройки многих модулей переписаны на более удобные</li>
+                            <li><span class="chg-label">FTHelper</span> — Авто божья аура</li>
+                            <li><span class="chg-label">SelfDestruct</span> — Улучшен</li>
+                            <li><span class="chg-label">FTHelper</span> — Подсвечивать расходники</li>
+                        </ul>
+                    </div>
+                    <div class="chg-group">
+                        <div class="chg-group-title is-fix">fix</div>
+                        <ul class="chg-list is-fix">
+                            <li>Все баги из раздела багов дискорда полностью были зафикшены</li>
+                            <li><span class="chg-label">KillAura</span> — таргет невидимых игроков</li>
+                            <li>Баг реконекта</li>
+                            <li>Aspect</li>
+                            <li>ConfigManager</li>
+                            <li>AutoSwap</li>
+                            <li>hud мелкие баги</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">30 июля 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">HUD</span> — Предметы HWHelper</li>
+                            <li><span class="chg-label">HWHelper</span> — Ком снега</li>
+                            <li><span class="chg-label">FTHelper</span> — Снежок заморозка, Огненный смерч</li>
+                            <li><span class="chg-label">AutoSwap</span> — Звук при свапе</li>
+                            <li><span class="chg-label">ElytraHelper</span> — Звук при свапе</li>
+                            <li><span class="chg-label">HitSound</span> — marker, moan1, moan2, moan3, moan4</li>
+                            <li><span class="chg-label">HUD</span> — ТПС</li>
+                            <li><span class="chg-label">KillAura</span> — Обход атаки 3.6 блоков</li>
+                            <li><span class="chg-label">KillAura</span> — Новый вид настройки Режим интерполяции, доступен таким ротациям как: Default, SpookyTime/HolyWorld, FunTimeSnap360, FunTimeTest, данная настройка помогает обойти больше анти читов</li>
+                            <li><span class="chg-label">AntiPush</span> — Удочка, Граница мира</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">27 июля 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">Velocity</span> — PolarTest</li>
+                            <li><span class="chg-label">WaterSpeed</span> — MetaHvH</li>
+                            <li><span class="chg-label">AutoTotem</span> — пофикшен/новые настройки</li>
+                            <li><span class="chg-label">AutoAccept</span> — Принимать заявку в клан</li>
+                            <li><span class="chg-label">Friend</span> — теперь есть звук добавления в друзья</li>
+                            <li><span class="chg-label">.gps</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">.macro</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">.bind</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">.config</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">.staff</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">.rct, memory</span> — воспроизводится звук</li>
+                            <li><span class="chg-label">ShulkerViewer</span> — новый рендер в инвентаре</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">25 июля 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">AntiTarget</span> — Улучшен</li>
+                            <li><span class="chg-label">Velocity</span> — Grim Cancel 2, Grim New</li>
+                            <li><span class="chg-label">BaseFinder</span> — Летает по кордам фт ищет игроков и записывает корды ник в блокнот на рабочем столе</li>
+                            <li><span class="chg-label">HUD</span> — Предметы FTHelper</li>
+                            <li><span class="chg-label">KillAura</span> — SpookyTime/HolyWorld</li>
+                            <li><span class="chg-label">AirJump</span> — new mod</li>
+                            <li>Система скриптов Script на lua позволяет вам добавлять свои модули в чит, так же скачивать модули других игроков, которые можно разместить или скачать в нашем дискорде: ТЫК</li>
+                        </ul>
+                    </div>
+                    <div class="chg-group">
+                        <div class="chg-group-title is-fix">fix</div>
+                        <ul class="chg-list is-fix">
+                            <li>Проведена оптимизация клиента</li>
+                            <li>Мелких багов чита</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="chg-section">
+                    <h3 class="chg-title"><span class="chg-date">10 июля 2025</span> <span class="chg-badge">Changelog</span></h3>
+                    <div class="chg-group">
+                        <div class="chg-group-title">Добавления/Изменения</div>
+                        <ul class="chg-list">
+                            <li><span class="chg-label">JumpCircle</span> — Свечение</li>
+                            <li><span class="chg-label">ChinaHat</span> — Шляпа обновлена</li>
+                            <li><span class="chg-label">DeathEffect</span> — Теперь можно отключить или настроить время замедления</li>
+                            <li><span class="chg-label">Trails</span> — Стрелка</li>
+                            <li><span class="chg-label">KillAura</span> — FunTimeSnap360 new</li>
+                            <li><span class="chg-label">KillAura</span> — SpookyTime new</li>
+                            <li><span class="chg-label">Hud</span> — Шейдерный</li>
+                            <li><span class="chg-label">ClickGui</span> — Шейдерный</li>
+                            <li><span class="chg-label">FarmBuilder</span> — Помогает в постройки фармилки криперов</li>
+                            <li><span class="chg-label">Speed</span> — Matrix</li>
+                            <li><span class="chg-label">AltManager</span> — улучшен</li>
+                            <li><span class="chg-label">KillAura</span> — Добавил несколько тестовых ротаций под разные сервера</li>
+                            <li><span class="chg-label">GodMode</span> — на ReallyWorld</li>
+                            <li><span class="chg-label">RWHelper</span> — теперь закрывает меню при заходе на сервер</li>
+                        </ul>
+                    </div>
+                    <div class="chg-group">
+                        <div class="chg-group-title is-fix">fix</div>
+                        <ul class="chg-list is-fix">
+                            <li>Проведена оптимизация клиента</li>
+                            <li>Мелких багов чита</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
