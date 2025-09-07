@@ -181,8 +181,6 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: #888;
     background: linear-gradient(100deg, #0342ff 0%, #ff0073 100%);
     -webkit-background-clip: text;

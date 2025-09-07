@@ -6,14 +6,21 @@
     <meta name="keywords" content="
         Minecraft cheat, Minecraft hack, free Minecraft cheat, VenusWare Minecraft hack, VenusWare cheat, Minecraft aimbot, undetectable Minecraft cheat, easy Minecraft cheat, customizable Minecraft cheat, multiplayer Minecraft hack, Minecraft client cheat, best Minecraft hack, top Minecraft cheat,
         чит для Minecraft, бесплатный чит Minecraft, чит VenusWare для Minecraft, невидимый чит Minecraft, легкий чит Minecraft, настраиваемый чит Minecraft, чит для серверов Minecraft, скачать чит Minecraft, лучший чит Minecraft, Minecraft чит бесплатно, Minecraft взлом клиента,
-luchshi minecraft chit, free venysware cheat, venysware minecraft hack, best venysware client, лучший майнкрафт чит, nevideimy chit minecraft, настраивемый чит Minecraft, легкий майнкрафт чит,
-ьштускфае сруфе, внуысщц штзр зтщкз, майнкрафт чит, майнкрафт хак, вунесваре, венусваре чит, майнкрафт взлом, free minecraft client, minecraft hack download, minecraft hack easy, undetectable hack minecraft
-">
+        luchshi minecraft chit, free venysware cheat, venysware minecraft hack, best venysware client, лучший майнкрафт чит, nevideimy chit minecraft, настраивемый чит Minecraft, легкий майнкрафт чит,
+        ьштускфае сруфе, внуысщц штзр зтщкз, майнкрафт чит, майнкрафт хак, вунесваре, венусваре чит, майнкрафт взлом, free minecraft client, minecraft hack download, minecraft hack easy, undetectable hack minecraft
+    ">
     <link rel="icon" type="image/png" href="assets/icon.png">
     <meta name="description" content="VenusWare - Лучший бесплатный клиент для любимой игры.">
-    <title>VenusWare - Лучший бесплатный клиент для любимой игры</title>
+    <title>VenusWare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles/home.css">
+
+    <meta property="og:title" content="VenusWare - Лучший бесплатный клиент для любимой игры">
+    <meta property="og:description" content="Лучший бесплатный клиент для вашей любимой игры с множеством функций и настроек. Наслаждайтесь игровым процессом с нашим удобным и мощным клиентом.">
+    <meta property="pg:image" content="https://pedophilia.today/img-vids/bg.webp">
+    <meta property="og:url" content="https://pedophilia.today/">
+    <meta property="og:type" content="website">
+
 </head>
 <body>
 
@@ -88,35 +95,32 @@ luchshi minecraft chit, free venysware cheat, venysware minecraft hack, best ven
         <h1>Видеообзор</h1>
         <p>Ниже вы можете посмотреть небольшой геймплей с нашим клиентом.</p>
         <div class="video-embed">
-            <video id="mainVideo" src="img-vids/vidoz.mp4" title="Обзор чита" allowfullscreen></video>
-            <div class="video-overlay" id="videoOverlay">
-                <div class="play-button" onclick="playVideo()">
+            <video id="mainVideo" src="img-vids/vidoz.mp4" title="Обзор чита" allowfullscreen onclick="handleVideoClick(event)"></video>
+            <div class="video-overlay" id="videoOverlay" onclick="handleVideoClick(event)">
+                <div class="play-button" onclick="playVideo(event)">
                     <i class="fas fa-play"></i>
                 </div>
             </div>
             <div class="video-controls" id="videoControls">
                 <div class="controls-row">
-                    <div class="time-display">
-                        <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                    <button class="control-btn play-pause-btn" onclick="playVideo(event)" id="playPauseBtn" title="Play/Pause">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="volume-control">
+                        <button class="control-btn" onclick="toggleMute()" id="muteBtn" title="Mute/Unmute">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <div class="volume-slider-container">
+                            <label for="volumeSlider"></label><input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="30" oninput="setVolume(this.value)">
+                        </div>
                     </div>
-                    <div class="control-buttons">
-                        <button class="control-btn" onclick="skipTime(-5)" title="Skip 5 seconds back">
-                            <i class="fas fa-backward"></i>
-                        </button>
-                        <button class="control-btn" onclick="playVideo()" id="playPauseBtn" title="Play/Pause">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <button class="control-btn" onclick="skipTime(5)" title="Skip 5 seconds forward">
-                            <i class="fas fa-forward"></i>
-                        </button>
-                        <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
+                    <button class="control-btn" onclick="toggleFullscreen()" title="Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
                 </div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar" onclick="seekVideo(event)">
-                        <div class="progress-fill" id="progressFill"></div>
+                        <label for="progressFill"></label><div class="progress-fill" id="progressFill"></div>
                     </div>
                 </div>
             </div>
