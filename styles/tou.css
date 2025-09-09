@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Stick footer to the bottom on short pages */
+
 body {
     display: flex;
     min-height: 100vh;
@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 
-/* Navbar */
+
 .navbar {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
@@ -171,7 +171,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Footer */
+
 footer {
     background-color: #080814;
     border-top: 1px solid rgba(255, 0, 255, 0.2);

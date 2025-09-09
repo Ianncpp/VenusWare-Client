@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-/* Navbar */
+
 .navbar {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
@@ -66,7 +66,7 @@ body {
     gap: 30px;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease 0.2s; /* Delay fade-in for smoother reappearance */
+    transition: opacity 0.5s ease 0.2s;
 }
 
 .navbar-links a {
@@ -165,7 +165,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Footer */
+
 footer {
     background-color: #080814;
     border-top: 1px solid rgba(255, 0, 255, 0.2);

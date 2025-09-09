@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for internal links
+
     const anchors = document.querySelectorAll('a[href^="#"]');
     if (!anchors.length) {
         console.warn('No anchor links with href^="#" found.');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Modal functionality
+    
     const openBtn = document.querySelector('.welcome-buttons .btn-dark');
     const closeBtn = document.querySelector('.modal-close');
     const modal = document.getElementById('changelogModal');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Video functionality
+    
     const video = document.getElementById('mainVideo');
     const overlay = document.getElementById('videoOverlay');
     const playPauseBtn = document.getElementById('playPauseBtn');
@@ -50,29 +50,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const muteBtn = document.getElementById('muteBtn');
 
     if (video && overlay && playPauseBtn && volumeSlider && muteBtn) {
-        // Set default volume to 30%
+        
         video.volume = 0.3;
         volumeSlider.value = 30;
         volumeSlider.style.background = `linear-gradient(to right, #ff0073 0%, #4760ff 100%) 0 0 / 30% 100% no-repeat rgba(255, 255, 255, 0.3)`;
         muteBtn.innerHTML = '<i class="fas fa-volume-down"></i>';
 
-        // Update volume slider on input
+        
         volumeSlider.addEventListener('input', () => {
             setVolume(volumeSlider.value);
         });
 
-        // Update time display when video loads
+        
         video.addEventListener('loadedmetadata', () => {
             updateTimeDisplay();
         });
 
-        // Update time and progress during playback
+        
         video.addEventListener('timeupdate', () => {
             updateTimeDisplay();
             updateProgress();
         });
 
-        // Handle play/pause events
+        
         video.addEventListener('play', () => {
             overlay.classList.add('hidden');
             playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
         });
 
-        // Handle fullscreen changes
+        
         document.addEventListener('fullscreenchange', () => {
             const fullscreenBtn = document.querySelector('.control-btn:last-child i');
             if (document.fullscreenElement) {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Keyboard shortcuts
+        
         document.addEventListener('keydown', (e) => {
             if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
                 switch (e.code) {

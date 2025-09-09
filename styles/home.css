@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-/* Navbar */
+
 .navbar {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
@@ -66,7 +66,7 @@ body {
     gap: 30px;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease 0.2s; /* Delay fade-in for smoother reappearance */
+    transition: opacity 0.5s ease 0.2s;
 }
 
 .navbar-links a {
@@ -92,7 +92,7 @@ body {
     margin-right: 8px;
 }
 
-/* Buttons */
+
 .btn {
     padding: 12px 24px;
     border-radius: 5px;
@@ -115,7 +115,7 @@ body {
     background: linear-gradient(330deg, #015eea 0%, #ff0073 100%);
 }
 
-/* Dark Button */
+
 .btn-dark {
     background: linear-gradient(330deg, rgb(0, 0, 0) 0%, rgba(142, 142, 142, 0.56) 100%);
     color: #fff;
@@ -128,14 +128,14 @@ body {
     background: linear-gradient(330deg, rgba(142, 142, 142, 0.56) 0%, rgb(0, 0, 0) 100%);
 }
 
-/* Welcome Section */
+
 .welcome {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 200px 10px; /* spațiu pentru navbar */
+    padding: 200px 10px;
     overflow: hidden;
     color: #fff;
 
@@ -195,7 +195,7 @@ body {
     gap: 10px;
 }
 
-/* Cards */
+
 .info-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -235,7 +235,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Video Section */
+
 .video-review {
     padding: 20px 0;
     background: linear-gradient(to bottom, #0a0a1a, #151528);
@@ -326,7 +326,7 @@ body {
     pointer-events: none;
 }
 
-/* Video Controls */
+
 .video-controls {
     position: absolute;
     bottom: 0;
@@ -401,7 +401,7 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    right: -6px; /* Adjusted to position thumb correctly */
+    right: -6px;
     transform: translateY(-50%);
     width: 12px;
     height: 12px;
@@ -409,7 +409,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
-    display: block; /* Ensure thumb is visible */
+    display: block;
 }
 
 .progress-bar:hover .progress-fill::after {
@@ -427,7 +427,7 @@ body {
     appearance: none;
 }
 
-/* Volume Control */
+
 .volume-control {
     display: flex;
     align-items: center;
@@ -492,7 +492,7 @@ body {
     border-radius: 3px;
 }
 
-/* Fullscreen styles */
+
 .video-embed.fullscreen {
     position: fixed;
     top: 0;
@@ -519,7 +519,7 @@ body {
     right: 0;
 }
 
-/* Statistics Section */
+
 .statistics {
     background: linear-gradient(to bottom, #151528, #0a0a1a);
     padding-bottom: 40px;
@@ -587,7 +587,7 @@ body {
     color: #fff;
 }
 
-/* Footer */
+
 footer {
     background-color: #080814;
     border-top: 1px solid rgba(255, 0, 255, 0.2);
@@ -628,7 +628,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Modal */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -801,7 +801,7 @@ footer {
     color: #ffffff;
 }
 
-/* Nice thin scrollbar for modal */
+
 .modal-body::-webkit-scrollbar {
     width: 10px;
 }
